@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+        <center>
+            Enter the number <input type="text" name="" id="n"/>
+            <br>
+            <button onclick="fact()">Factorial</button>
+            <div id="ResultDiv"></div>
+        </center>
+        <script>
+            const fact=(a)=>{
+                let n=parseInt(document.getElementById("n").value);
+                let result="<table border='1' width='50' >";
+                    result+="<tr><th>Number</th><th>Factorial</th></tr>"
+                for(let i=1;i<=n;i++){
+                    let fact=1;
+                    for(let j=1;j<=i;j++){
+                        fact=fact*j;
+                    }
+                    result+="<tr><th>"+i+"</td><td>"+fact+"</td></tr>";
+                }
+                result+="</table>";
+                document.getElementById("ResultDiv").innerHTML=result;
+            }
+        </script>
+    </body>
+</html>
