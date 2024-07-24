@@ -1,0 +1,12 @@
+h1{
+    border: 2px solid blue;
+    text-align: center;
+    width: 50%;
+    color: blue;
+    background-color: yellow;
+    cursor: pointer;
+    border-radius: 25px;
+    position: relative;
+    left: 350px;
+}
+            
