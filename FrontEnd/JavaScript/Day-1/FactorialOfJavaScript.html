@@ -1,0 +1,18 @@
+<html>
+    <head></head>
+    <body>
+        Enter the number <input type="number" id="n1" value="this number" onfocus="this.value(factorial())" onblur="factorial()" >
+        
+        <div id="ResultDiv"></div>
+        <script>
+            function factorial(){
+                let a=document.getElementById("n1").value;
+                let result=1;
+                for(let i=1;i<=a;i++){
+                     result=result*i;
+                }
+                document.getElementById("ResultDiv").innerHTML="Factorial: "+result;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>String Page</title>
+    </head>
+    <body>
+        Enter First Number<input text="text" id="n1"/>
+        Select the Operation<select id="op">
+            <option value="Stringlength">String length</option>
+            <option value="StringcharAt">String charAt()</option>
+            <option value="Stringslice">String slice()</option>
+            <option value="Stringsubstring">String substring()</option>
+            <option value="Stringsubstr">String substr()</option>
+            <option value="StringtoUperCase">String toUpperCase()</option>
+            <option value="StringtoLowerCase">String toLowerCase()</option>
+            <option value="Stringconcat">String concat()</option>
+            <option value="Stringtrim">String trim()</option>
+            <option value="StringtrimStart">String trimStart()</option>
+            <option value="StringtrimEnd">String trimEnd()</option>
+            <option value="Stringrepeat">String repeat()</option>
+            <option value="Stringreplace">String replace()</option>
+            <option value="StringreplaceAll">String replaceAll()</option>
+            <option value="Stringsplit">String split()</option>
+        </select><br><br>
+            <button  onclick="stringmethod()">Check String</button><br>
+            <div id="ResultDiv"></div>
+            <div id="Result"></div>
+            <script>
+                function stringmethod(){
+                    let a=document.getElementById("n1").value;
+                    let op=document.getElementById("op").value;
+                    let b='';
+                    let myArr='';
+                    let result='';
+                    if(op=="Stringlength"){
+                        result=a.length;
+                        document.getElementById("ResultDiv").innerHTML="String length: "+result;
+                    }
+                    if(op=="StringcharAt"){
+                        let input=(prompt().value);
+                        result=a.charAt(input);
+                        document.getElementById("ResultDiv").innerHTML="String charAt: "+result;
+                    }
+                    if(op=="Stringslice"){
+                        let input1=prompt();
+                        let input2=prompt();
+                        result=a.slice(input1,input2);
+                        document.getElementById("ResultDiv").innerHTML="String Slice: "+result;
+                    }
+                    if(op=="Stringsubstring"){
+                        let input1=prompt();
+                        let input2=prompt();
+                        result=a.substring(input1,input2);
+                        document.getElementById("ResultDiv").innerHTML="String Substring: "+result;
+                    }
+                    if(op=="StringtoUperCase"){
+                        result=a.toUpperCase();
+                        document.getElementById("ResultDiv").innerHTML="String toUpperCase: "+result;
+                    }
+                    if(op=="StringtoLowerCase"){
+                        result=a.toLowerCase();
+                        document.getElementById("ResultDiv").innerHTML="String toLowerCase: "+result;
+                    }
+                    if(op=="Stringconcat"){
+                        let input1=prompt();
+                        result=a.concat(" ",input1);
+                        document.getElementById("ResultDiv").innerHTML="String concat: "+result;
+                    }
+                    if(op=="Stringconcat"){
+                        let input1=prompt();
+                        result=a.concat(" ",input1);
+                        document.getElementById("ResultDiv").innerHTML="String concat: "+result;
+                    }
+                    if(op=="Stringtrim"){
+                        result=a.trim();
+                        b=a.length;
+                        document.getElementById("Result").innerHTML="String length: "+b;
+                        document.getElementById("ResultDiv").innerHTML="<br>String trim: "+result+"<br>String trim length:"+result.length;
+                    }if(op=="StringtrimStart"){
+                        b=a.length;
+                        result=a.trimStart();
+                        document.getElementById("Result").innerHTML="String length: "+b;
+                        document.getElementById("ResultDiv").innerHTML="<br>String trimStart: "+result+"<br>String trimStart length:"+result.length;
+                    }
+                    if(op=="StringtrimStart"){
+                        b=a.length;
+                        result=a.trimEnd();
+                        document.getElementById("Result").innerHTML="String length: "+b;
+                        document.getElementById("ResultDiv").innerHTML="<br>String trimEnd: "+result+"<br>String trimEnd length:"+result.length;
+                    }
+                    if(op=="Stringrepeat"){
+                        let input=prompt();
+                        result=a.repeat(input);
+                        document.getElementById("ResultDiv").innerHTML="<br>String repeat: "+result;
+                    }
+                    if(op=="Stringreplace"){
+                        let input1=prompt();
+                        let input2=prompt();
+                        result=a.replace(input1,input2);
+                        document.getElementById("ResultDiv").innerHTML="<br>String replace: "+result;
+                    }
+                    if(op=="StringreplaceAll"){
+                        let input1=prompt();
+                        let input2=prompt();
+                        result=a.replaceAll(input1,input2);
+                        document.getElementById("ResultDiv").innerHTML="<br>String replaceAll: "+result;
+                    }
+                    if(op=="Stringsplit"){
+                        let input1=prompt();
+                        let input2=prompt();
+                        myArr=a.split(input1);
+                        document.getElementById("ResultDiv").innerHTML="<br>String split: "+myArr[input2];
+                    }
+                    
+                }
+                
+            </script>
+    </body>
+</html>

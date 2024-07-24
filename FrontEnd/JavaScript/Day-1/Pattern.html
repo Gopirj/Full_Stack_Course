@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Pattern Program</title>
+        <script>
+            function pattern(){
+                let a=document.getElementById("num1").value;
+                
+                let b=document.querySelector("#ResultDiv");
+                for(let i=0;i<a;i++){
+                    for(let j=0;j<=i;j++){
+                       let c=document.createElement("span") 
+                       c.innerHTML="* ";
+                       b.append(c);
+                    }
+                    let br=document.createElement("br");
+                    b.append(br);
+
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        Enter the number <input type="text" name="" id="num1" >
+        <button onclick="pattern()">Pattern Number</button>
+        <div id="ResultDiv"></div>
+       
+    </body>
+</html>

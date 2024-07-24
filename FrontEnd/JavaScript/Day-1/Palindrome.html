@@ -1,0 +1,27 @@
+<html>
+    <head>Palindrome</head>
+    <body>
+        Enter the number <input type="text" name="" id="np1">
+        <button onclick="palindrome()">Palindrome</button>
+        <div id="ResultDiv"></div>
+        <script>
+            function palindrome(){
+                let a=document.getElementById("np1").value;
+                let rev="",b;
+                for(let i=a.length-1;i>=0;i--){
+                    rev+=a[i];
+                    console.log(rev);
+                }
+                
+                if(a===rev){
+                    b="is a palindrome";
+                    document.getElementById("ResultDiv").innerHTML="Palindrome: "+b;
+                }
+                else{
+                    b="is not a palindrome";
+                    document.getElementById("ResultDiv").innerHTML="Palindrome: "+b;
+                }
+            }
+        </script>
+    </body>
+</html>

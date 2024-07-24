@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Array object</title>
+    </head>
+    <body onload="MyFunction()">
+        <script>
+            function MyFunction(){
+                let skills=new Array("c","c++","java","python");
+                document.write("Array Elements : "+skills);
+                document.write("<br>Total no of Elements : "+skills.length);
+                document.write("<br> First Element : "+skills[0]);
+                document.write("<br>Last Element : "+skills[skills.length-1]);
+                skills.push(".net");
+                document.write("<br>Array Elements : "+skills);
+                skills.pop();
+                document.write("<br>Array Element : "+skills);
+                for(let i=0;i<skills.length;i++){
+                    document.write("<br>"+skills[i]);
+                }
+            }
+        </script>
+    </body>
+</html>

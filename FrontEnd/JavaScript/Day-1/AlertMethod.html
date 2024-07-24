@@ -1,0 +1,43 @@
+<html>
+    <head></head>
+    <body onload="welcome()" onunload="leave()">
+        
+        <!-- <button onclick="myFunction()">Click Me</button>
+        <button onclick="addition(10,20)">Addition</button>
+        <button onclick="subtraction(10,20)">Subtraction</button>
+        <button onclick="mul(10,20)">Multiplication</button>
+        <button onclick="div(10,20)">Division</button><br><br> -->
+        <button onclick="greeting()">Say Welcome</button>
+        <script>
+            // function myFunction(){
+            //     alert("JavaScript Function Example");
+            // }
+            // function addition(a,b){
+            //     let sum=a+b;
+            //     alert("Sum:"+sum);
+            // }
+            // function subtraction(a,b){
+            //     let sub=a-b;
+            //     alert("Subtraction:"+sub);
+            // }
+            // function mul(a,b){
+            //     let mul=a*b;
+            //     alert("Multiplication:"+mul);
+            // }
+            // function div(a,b){
+            //     let div=a*b;
+            //     alert("division:"+div);
+            // }
+            function welcome(){
+                alert("hi,Welcome!");
+            }
+            function greeting(){
+                let name=prompt("Enter your name:");
+                alert("Welcome "+name);
+            }
+            function leave(){
+                confirm("Do you want to leave the page?");
+            }
+        </script>
+    </body>
+</html>
