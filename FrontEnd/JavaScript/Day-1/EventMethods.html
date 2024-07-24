@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>PrimeNumber</title>
+    </head>
+    <body>
+        Enter the number <input type="text" name="" id="num1" >
+        <button onclick="MyFunction(event)">Click Button</button>
+        <div id="ResultDiv"></div>
+        <script>
+            function MyFunction(event){
+                let x=event.bubbles;
+                document.getElementById("ResultDiv").innerHTML=x;
+            }
+        </script>
+    </body>
+</html>

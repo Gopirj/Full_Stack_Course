@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 100vh;
+  background-color: #dadff7;
+}
+.calculator {
+  width: 300px;
+  background-color: #071013;
+  padding: 50px 30px 20px 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  border-radius: 25px;
+  
+}
+.display {
+  width: 100%;
+}
+.display input {
+  width: 100%;
+  padding: 15px 10px;
+  text-align: right;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 35px;
+}
+.display input::placeholder {
+  color: #9490ac;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  margin-top: 40px;
+}
+button {
+  font-size: 20px;
+  padding: 17px;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+#equal {
+  grid-row: span 2;
+}
+#zero {
+  grid-column: span 2;
+}
+
+.operation {
+  background-color: #f69906;
+}
+
+.operation:hover {
+  background-color: #eef606db;
+}
+
+.digit {
+  background-color: #313131;
+}
+
+.digit:hover {
+  background-color: white;
+  color: black;
+}
+  </style>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <input type="text" placeholder="0" id="input"  name="display" />
+      </div>
+      <div class="buttons" >
+        <button value="AC" id="clear" class="operation" onclick="input.value=''" >AC</button>
+        <button value="" class="operation" onclick="del()">DEL</button>
+        <button value="/" class="operation" onclick="input.value+='/'">/</button>
+        <button value="*" class="operation" onclick="input.value+='*'" >*</button>
+
+        <button value="7" class="digit" onclick="input.value+='7'" >7</button>
+        <button value="8" class="digit" onclick="input.value+='8'">8</button>
+        <button value="9" class="digit" onclick="input.value+='9'">9</button>
+        <button value="-" class="operation" onclick="input.value+='-'">-</button>
+
+        <button value="6" class="digit" onclick="input.value+='6'">6</button>
+        <button value="5" class="digit" onclick="input.value+='5'">5</button>
+        <button value="4" class="digit" onclick="input.value+='4'">4</button>
+        <button value="+" class="operation" onclick="input.value+='+'">+</button>
+
+        <button value="1" class="digit" onclick="input.value+='1'">1</button>
+        <button value="2" class="digit" onclick="input.value+='2'">2</button>
+        <button value="3" class="digit" onclick="input.value+='3'">3</button>
+
+        <button value="=" id="equal" class="operation"onclick="change()" >=</button>
+        <button value="0" class="digit" id="zero" onclick="input.value+='0'">0</button>
+        <button value="." class="digit" onclick="input.value+='.'">.</button>
+      
+    </div>
+    <script>
+        let inputBox=(document.getElementById("input"));
+        function change(){
+            inputBox.value=eval(inputBox.value);
+        }
+        function del(){
+          console.log(inputBox);
+            inputBox.value=(inputBox.value).substring(0,(inputBox.value).length-1);
+        }
+    </script>
+  </body>
+</html>
