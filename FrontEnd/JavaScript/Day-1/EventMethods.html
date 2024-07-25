@@ -2,15 +2,30 @@
     <head>
         <title>PrimeNumber</title>
     </head>
-    <body>
-        Enter the number <input type="text" name="" id="num1" >
+    <body onload="body()">
+        <input type="text" id="input1" onfocus="change()"/>
         <button onclick="MyFunction(event)">Click Button</button>
+        <button onclick="change()">Click Me</button>
+        <p onmouseover="mouse()"> Keep cursor over me</p>
         <div id="ResultDiv"></div>
+        
         <script>
+            function mouse(){
+		        alert("This is javaScript");
+	        }
+            function body(){
+                alert("Hello guys")
+            }
+            function change(){
+                document.getElementById("ResultDiv").innerHTML="<br> Hi Gopi";
+            }
             function MyFunction(event){
                 let x=event.bubbles;
                 document.getElementById("ResultDiv").innerHTML=x;
             }
+            function change(){
+		        document.getElementById("input1").style.background=" red";
+	        }
         </script>
     </body>
 </html>
