@@ -1,0 +1,24 @@
+<h1>Welcome to Angular</h1>
+<br>
+
+
+
+<app-my-component></app-my-component>
+<br>
+<b>
+name : {{name}};
+age : {{age}};
+email :{{email}};
+<h1>Property Binding Example</h1>
+<br>Name <input type="text" [value]="name" />
+<br>Age <input type="text"[value]="age"/>
+<br>Email <input type="text" [value]="email" />
+
+<h1>Event Binding Example</h1>
+<button (click)="changName()">Chang Name</button>
+<br>
+<br>
+<img [src]="imagepath" alt="" width="150px" height="150px">
+<br>
+<button (click)="changImage()">Change Image</button>
+</b>

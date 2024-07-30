@@ -1,0 +1,32 @@
+<h1>Two Data Binding</h1>
+<br>
+Enter your First Name <input type="text" [(ngModel)]="fname" />
+<p>Hello {{fname}}</p>
+<br>
+
+<h1 [ngClass]="myClass">Structural and Attribute Directives Example</h1>
+<br>
+<button (click)="changeFlag()">Show or Hide Div</button>
+<br>
+<div *ngIf="flag">
+  <br>
+  <ul>
+    <!-- let -> data type,vec -> variable name, of ->method of moving data, vehicles ->store data  -->
+    <li *ngFor="let vec of vehicles">{{vec}}
+    </li>
+  </ul>
+</div>
+<div *ngIf="flag" [ngStyle]="myStyle">
+  <br>
+  <ul>
+    <li *ngFor="let vec of vehicles" (click)="setSelectedItem(vec)">{{vec}}</li>
+  </ul>
+  <b>You have selected :{{selectedVehicle}}</b>
+  <div [ngSwitch]="selectedVehicle">
+    <font color="green" *ngSwitchCase="'TwoWheeler'">Bike</font>
+    <font color="green" *ngSwitchCase="'ThreeWheeler'">Auto</font>
+    <font color="green" *ngSwitchCase="'FourWheeler'">Car</font>
+    <font color="green" *ngSwitchDefault>Invalie</font>
+  </div>
+  <button (click)="changeStyle()">Change color</button>
+</div>
