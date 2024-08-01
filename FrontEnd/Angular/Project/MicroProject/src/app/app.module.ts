@@ -4,12 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { Gobi1Component } from './gobi1/gobi1.component';
+import { TopComponent } from './top/top.component';
+import { CenterComponent } from './center/center.component';
+import { RightComponent } from './right/right.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    Gobi1Component
+    TopComponent,
+    CenterComponent,
+    RightComponent
   ],
   imports: [
     BrowserModule,

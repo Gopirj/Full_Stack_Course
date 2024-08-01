@@ -1,0 +1,10 @@
+
+input{
+    background: transparent;
+    color: black;
+    border: none;
+    border-bottom: 2px solid white;
+}
+label{
+    color: white;
+}
