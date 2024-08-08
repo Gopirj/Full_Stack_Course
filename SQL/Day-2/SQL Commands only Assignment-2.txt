@@ -1,0 +1,54 @@
+SQL Commands:
+
+1. create table Sales_table (sale_id number(5),product_id number(5),quantity_sold number(5),sale_date date,total_price number(10));
+ insert into Sales_table values(1,101,5,'01-jan-2024',2500.00);
+ insert into Sales_table values(2,102,3,'02-jan-2024',900.00);
+ insert into Sales_table values(3,103,2,'02-jan-2024',60.00);
+ insert into Sales_table values(4,104,4,'03-jan-2024',80.00);
+ insert into Sales_table values(5,105,6,'03-jan-2024',90.00);
+
+ select *from Sales_table;
+
+
+2. select sale_id,quantity_sold from Sales_table;
+
+3. select sale_id,sale_date from Sales_table;
+
+4. select *from Sales_table where total_price>100;
+
+5. select sale_id,total_price from Sales_table where sale_date='3-jan-2024';
+
+6. select sale_id,product_id,total_price from Sales_table where quantity_sold>4;
+
+7. select * from Sales_table where sale_id in(1,3,5);
+
+8. select * from Sales_table where total_price between 90 and 1000;
+
+9. select * from Sales_table where total_price not between 90 and 1000;
+
+10. select * from Sales_table where sale_id not in(1,3,5);
+
+11. update Sales_table set total_price=500 where sale_id in(1,3,5);
+
+ 	*select *from Sales_table;
+
+12. delete Sales_table where total_price not between 90 and 1000;
+
+ 	*select *from Sales_table;
+
+13. select *from Sales_table order by sale_id asc;
+
+14. select *from Sales_table order by sale_id desc;
+
+15. alter table Sales_table rename column sale_id to sales_id;
+
+     *select *from Sales_table;
+
+16. alter table Sales_table drop column sales_id;
+
+     *select *from Sales_table;
+
+17 alter table Sales_table rename to tbl_sales;
+
+18. drop table tbl_sales;
+

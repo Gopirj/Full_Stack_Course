@@ -1,0 +1,39 @@
+First table 1: 
+
+create table CLIENT_MASTER(Client_No varchar(15),Name varchar(20),City varchar(15),Pincode varchar(10),Bal_due varchar(10));
+
+ insert into CLIENT_MASTER values ('C00001','SMITHA JAIN','Mumbai',400054,15000);
+ insert into CLIENT_MASTER values ('C00002','VANDANA RAO','Chennai',780001,0);
+ insert into CLIENT_MASTER values ('C00003','PREM PUJARI','Mumbai',400057,500);
+ insert into CLIENT_MASTER values ('C00004','BASU NATH','Mumbai',400056,0);
+ insert into CLIENT_MASTER values ('C00005','RAVI SHANKAR','Delhi',100001,2000);
+ insert into CLIENT_MASTER values ('C00006','ROOPA','Mumbai',400050,0);
+ select *from CLIENT_MASTER;
+
+ 1.select distinct *from CLIENT_MASTER where BAL_DUE=0;
+ 2.update CLIENT_MASTER set CITY='Jaipur' where CLIENT_NO='C00004';
+ 3.select distinct *from CLIENT_MASTER where CITY='Mumbai';
+ 
+
+Second table 2:
+
+create table SALE_ORDER (Order_No varchar(6),Order_Date varchar(20),Client_No varchar(6),Salesman_No varchar (20),Dely_Date varchar(20),Order_Status varchar(20));
+
+insert into SALE_ORDER values('O19001','12-Jan-13','C00001','S00001','20-Jan-13','In process');
+insert into SALE_ORDER values('O19002','25-Jan-13','C00002','S00002','27-Jan-13','Cancelled');
+insert into SALE_ORDER values('O46865','18-Feb-13','C00003','S00003','20-Feb-13','Fulfilled');
+insert into SALE_ORDER values('O19003','03-Apr-13','C00001','S00001','07-Apr-13','Fulfilled');
+insert into SALE_ORDER values('O46866','20-May-13','C00004','S00002','07-Apr-13','Cancelled');
+insert into SALE_ORDER values('O19008','24-May-13','C00005','S00004','26-May-13','In process');
+
+select *from SALE_ORDER;
+
+4. select so.Order_No, ck.Name, ck.City, ck.Pincode From tbl_Sale_Order so JOIN tbl_Client_Master ck ON so.Client_No = ck.Client_No where So.Order_No IN ('O19003','O19002');
+
+5.SELECT Name || ' lives in the city of ' || City AS Sentence FROM tbl_Client_Master;
+
+6.SELECT ck.Client_No, ck.Name, ck.City, ck.Pincode FROM CLIENT_MASTER ck JOIN SALE_ORDER so ON ck.Client_No = so.Client_No
+WHERE so.Order_Status IN ('In process');
+
+
+
